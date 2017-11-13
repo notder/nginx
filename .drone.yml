@@ -3,9 +3,11 @@ pipeline:
     image: nginx
     environment:
     commands:
+      - nginx -s reload
 
   publish:
     image: nginx
     commands:
+      - nginx -s reload    
     when:
       branch: master
